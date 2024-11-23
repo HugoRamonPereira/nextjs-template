@@ -2,19 +2,41 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const charlevoixLight = localFont({
+  src: [
+    {
+      path: "../app/fonts/CharlevoixPro-Light.woff",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  variable: "--charlevoix-light",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const charlevoixMedium = localFont({
+  src: [
+    {
+      path: "../app/fonts/CharlevoixPro-Medium.woff",
+      weight: "500",
+      style: "normal",
+    },
+  ],
+  variable: "--charlevoix-medium",
+});
+
+const charlevoixBold = localFont({
+  src: [
+    {
+      path: "../app/fonts/CharlevoixPro-Bold.woff",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--charlevoix-bold",
 });
 
 export const metadata: Metadata = {
-  title: "Next | Shadcn Template",
+  title: "Next.js 15 | Shadcn Template",
   description: "A template with Next.js 15, React.js 19 and Shadcn-UI",
 };
 
@@ -26,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${charlevoixLight.variable} ${charlevoixMedium.variable} ${charlevoixBold.variable} antialiased`}
       >
         {children}
       </body>
