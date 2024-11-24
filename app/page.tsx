@@ -19,7 +19,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="w-full bg-sky-100">
+    <div className="w-full relative select-none">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-sky-50 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-blue-400 opacity-20 blur-[100px]" />
+      </div>
       <div className="max-w-7xl mx-auto min-h-svh flex flex-col gap-8 p-10">
         <div className="flex flex-col items-center justify-center gap-4 tracking-wide w-full h-40 border border-black rounded-lg">
           <h1 className="font-[family-name:var(--charlevoix-medium)] text-lg md:text-2xl p-4 text-center">
@@ -47,7 +50,7 @@ export default function Home() {
             <TechCard image={node} name="Node.js" imageWidth={60} />
           </div>
         </div>
-        <div className="flex flex-col items-center p-4 justify-around font-[family-name:var(--charlevoix-medium)] text-lg tracking-wide w-full h-40 border border-black rounded-lg">
+        <div className="flex flex-col items-center p-4 justify-around font-[family-name:var(--charlevoix-medium)] text-base md:text-lg tracking-wide w-full h-40 border border-black rounded-lg">
           <p className="text-center mb-4 sm:mb-0">
             Please sign in or sign up to have access to all of the components
           </p>

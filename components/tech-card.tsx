@@ -14,7 +14,7 @@ export default function TechCard({ image, name, imageWidth }: TechCardProps) {
       <CardContent className="flex flex-col items-center p-4">
         <Image src={image} alt="logo" width={imageWidth} height={50} />
       </CardContent>
-      <CardFooter className="select-none flex justify-center items-end text-center">
+      <CardFooter className="flex justify-center items-end text-center">
         <p className="text-nowrap">{name}</p>
       </CardFooter>
     </Card>
