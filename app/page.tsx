@@ -20,20 +20,21 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="w-full relative select-none">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-sky-50 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-blue-400 opacity-20 blur-[100px]" />
+      {/* The  next two divs are the ones that apply the grid pattern  */}
+      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-purple-tertiary opacity-20 blur-[100px]" />
       </div>
       <div className="max-w-7xl mx-auto min-h-svh flex flex-col gap-8 p-10">
-        <div className="flex flex-col items-center justify-center gap-4 tracking-wide w-full h-40 border border-black rounded-lg">
-          <h1 className="font-[family-name:var(--charlevoix-medium)] text-lg md:text-2xl p-4 text-center">
+        <div className="flex flex-col items-center justify-center gap-4 tracking-wide w-full h-40 border border-purple-tertiary rounded-lg">
+          <h1 className="font-[family-name:var(--charlevoix-medium)] text-lg md:text-2xl p-4 text-center text-purple-quarternary">
             Welcome to the Next.js 15 | React.js 19 | Shadcn-UI Template
           </h1>
-          <p className="font-[family-name:var(--charlevoix-light)] text-sm md:text-base lg:text-lg text-center pb-4">
+          <p className="font-[family-name:var(--charlevoix-light)] text-sm md:text-base lg:text-lg text-center text-purple-quarternary pb-4">
             This template is made of the best and most modern technologies for
             Web Development
           </p>
         </div>
-        <div className="flex flex-col gap-6 items-center p-4 justify-around font-[family-name:var(--charlevoix-medium)] text-lg md:text-xl tracking-wide w-full flex-1 border border-black rounded-lg text-center">
+        <div className="flex flex-col gap-6 items-center p-4 justify-around font-[family-name:var(--charlevoix-medium)] text-lg md:text-xl tracking-wide w-full flex-1 border border-purple-tertiary rounded-lg text-center text-purple-quarternary">
           These are the technologies used in this project
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             <TechCard image={nextjs} name="Next.js" imageWidth={60} />
@@ -50,19 +51,27 @@ export default function Home() {
             <TechCard image={node} name="Node.js" imageWidth={60} />
           </div>
         </div>
-        <div className="flex flex-col items-center p-4 justify-around font-[family-name:var(--charlevoix-medium)] text-base md:text-lg tracking-wide w-full h-40 border border-black rounded-lg">
-          <p className="text-center mb-4 sm:mb-0">
+        <div className="flex flex-col items-center p-4 justify-around font-[family-name:var(--charlevoix-medium)] text-base md:text-lg tracking-wide w-full h-40 border border-purple-tertiary rounded-lg">
+          <p className="text-center text-purple-quarternary mb-4 sm:mb-0">
             Please sign in or sign up to have access to all of the components
           </p>
-          <div className="flex gap-4 text-l">
+          <div className="flex gap-4">
             <Link href="sign-in">
-              <Button variant="main" size="lg">
-                Sign In <ArrowRight />
+              <Button
+                variant="default"
+                size="lg"
+                className="text-base font-charlevoix-medium"
+              >
+                Sign In <ArrowRight strokeWidth={2.5} />
               </Button>
             </Link>
             <Link href="sign-up">
-              <Button variant="main" size="lg">
-                Sign Up <PlusIcon />
+              <Button
+                variant="default"
+                size="lg"
+                className="text-base font-charlevoix-medium"
+              >
+                Sign Up <PlusIcon strokeWidth={2.5} />
               </Button>
             </Link>
           </div>

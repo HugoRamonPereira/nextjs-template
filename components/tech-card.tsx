@@ -10,12 +10,12 @@ interface TechCardProps {
 
 export default function TechCard({ image, name, imageWidth }: TechCardProps) {
   return (
-    <Card className="bg-transparent border-black">
+    <Card className="bg-transparent border-purple-tertiary">
       <CardContent className="flex flex-col items-center p-4">
         <Image src={image} alt="logo" width={imageWidth} height={50} />
       </CardContent>
       <CardFooter className="flex justify-center items-end text-center">
-        <p className="text-nowrap">{name}</p>
+        <p className="text-nowrap text-purple-quarternary">{name}</p>
       </CardFooter>
     </Card>
   );
