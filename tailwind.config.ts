@@ -15,7 +15,12 @@ export default {
         "charlevoix-bold": ["var(--charlevoix-bold)", "sans-serif"],
       },
       colors: {
-        background: "hsl(var(--background))",
+        background: "#e9e8fc",
+        "purple-primary": "#a2a3fc",
+        "purple-secondary": "#8f90fb",
+        "purple-tertiary": "#7c7dfb",
+        "purple-quarternary": "#696afa",
+        "purple-quinary": "#5657fa",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",
