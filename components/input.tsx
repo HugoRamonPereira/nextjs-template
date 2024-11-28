@@ -50,7 +50,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {inputType === "password" && (
           <button
             type="button"
-            className="absolute top-4 right-4 p-0.5 rounded outline-none focus:outline-purple-tertiary focus:outline-[1.25px]"
+            className="absolute top-4 right-4 p-0.5 rounded outline-none focus:outline-purple-tertiary focus:outline-2"
             onClick={togglePasswordVisibility}
           >
             {showPassword ? (

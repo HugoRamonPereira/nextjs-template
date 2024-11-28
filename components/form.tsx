@@ -9,12 +9,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import formPadlock from "../public/assets/images/form-padlock.png";
 import Link from "next/link";
+import { Checkbox } from "./ui/checkbox";
 
 interface FormProps {
   formType: "sign-in" | "sign-up";
 }
 
-export default function FormTwo({ formType }: FormProps) {
+export default function Form({ formType }: FormProps) {
   const router = useRouter();
 
   const formSchema = z
@@ -87,20 +88,32 @@ export default function FormTwo({ formType }: FormProps) {
           <p>Ainda não tem uma conta?</p>
           <Link
             href="/sign-up"
-            className="underline underline-purple-tertiary underline-offset-4 hover:text-purple-quinary transition-colors duration-200"
+            className="underline underline-purple-tertiary underline-offset-4 hover:text-purple-quinary transition-colors duration-200 rounded outline-none focus:outline-purple-tertiary focus:outline-2"
           >
             Criar Conta
           </Link>
         </div>
       ) : (
-        <div className="flex items-center justify-center gap-2 mb-3 text-center text-purple-tertiary">
-          <p>Já possui uma conta?</p>
-          <Link
-            href="/sign-in"
-            className="underline underline-purple-tertiary underline-offset-4 hover:text-purple-quinary transition-colors duration-200"
-          >
-            Fazer Login
-          </Link>
+        <div className="flex flex-col text-center text-purple-tertiary">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <p>Já possui uma conta?</p>
+            <Link
+              href="/sign-in"
+              className="underline underline-purple-tertiary underline-offset-4 hover:text-purple-quinary transition-colors duration-200 rounded outline-none focus:outline-purple-tertiary focus:outline-2"
+            >
+              Fazer Login
+            </Link>
+          </div>
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <Checkbox />
+            <p>Eu li e aceito os</p>
+            <Link
+              href="/terms"
+              className="underline underline-purple-tertiary underline-offset-4 hover:text-purple-quinary transition-colors duration-200 rounded outline-none focus:outline-purple-tertiary focus:outline-2"
+            >
+              Termos e Condições
+            </Link>
+          </div>
         </div>
       )}
       <Button
